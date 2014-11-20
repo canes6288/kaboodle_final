@@ -5,18 +5,17 @@ angular.module('myApp')
                                function ($scope, contestsService) {
 
   $scope.getContests = function() {
-    // contestsService.getAll().success(function(data) {
-    //   $scope.contests = data;
-    // }).error(function() {
-    //   alert('something went wrong!');
-    // });
-    $scope.contests = contestsService.contests;
+    contestsService.getAllContests().success(function(data) {
+      $scope.contests = data;
+    }).error(function() {
+      alert('something went wrong!');
+    });
   };
+
+  $scope.getContests();
 
   $scope.selectContest = function(contest) {
     contestsService.setSelectedContest(contest);
   };
-
-  $scope.getContests();
 
 }]);

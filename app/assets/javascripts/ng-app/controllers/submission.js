@@ -6,14 +6,23 @@ angular.module('myApp')
 
   $scope.selectedContest = contestsService.selectedContest;
 
-  $scope.numQuestions = function() {
-    return $scope.selectedContest.question_file.length;
+  $scope.getQuestions = function() {
+    contestsService.getQuestions().success(function(data) {
+      $scope.questions = data;
+    }).error(function() {
+      alert('something went wrong!');
+    });
   };
 
-  $scope.currentQuestion = $scope.selectedContest.question_file[0];
+  $scope.getQuestions();
+
+  $scope.numQuestions = function() {
+    return $scope.selectedContest.questions.length;
+  };
+
 
   $scope.answers = [];
-  $scope.questions = [];
+  // $scope.questions = [];
 
   $scope.data = {};
 
@@ -24,9 +33,9 @@ angular.module('myApp')
     if ($scope.currentQuestion.question_number < $scope.numQuestions()) {
       $scope.answers.push($scope.data.answer);
       $scope.data.answer = '';
-      $scope.questions.push($scope.currentQuestion.label)
+      // $scope.questions.push($scope.currentQuestion.label)
       $scope.currentQuestion =
-      $scope.selectedContest.question_file[$scope.currentQuestion.question_number];
+      $scope.selectedContest.questions[$scope.currentQuestion.question_number];
       $scope.questionForm.$setPristine();
    }
   };

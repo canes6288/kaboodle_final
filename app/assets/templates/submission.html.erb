@@ -3,7 +3,7 @@
     <div ng-hide="isDone()">
       <p class="lead">Answer the questions below or upload a file.</p>
     </div>
-    <h3 class="text-center">{{ currentQuestion.label }}</h3>
+    <h3 class="text-center">{{ currentQuestion.content }}</h3>
     <div ng-hide="isDone()">
       <form name="questionForm" novalidate>
         <div>
@@ -13,6 +13,7 @@
           </div>
         </div>
       </form>
+      <pre>Questions: {{ questions | json }}</pre>
       <pre>Answers: {{ answers | json }}</pre>
       <pre>Answer:  {{ data.answer | json }}</pre>
     </div>
