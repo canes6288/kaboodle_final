@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="jumbotron text-center">
+    <div ng-hide="isDone()">
+      <p class="lead">Answer the questions below or upload a file.</p>
+    </div>
+    <h3 class="text-center">{{ currentQuestion.label }}</h3>
+    <div ng-switch="currentQuestion.input_type">
+      <form name="questionForm" novalidate>
+        <div ng-switch-when="text">
+          <textarea class="form-control" ng-model="data.answer"></textarea>
+          <div class="question-button">
+            <button class="btn btn-primary btn-md" ng-click="goToNextQuestion();" ng-disabled="questionForm.$invalid">next question</button>
+          </div>
+        </div>
+      </form>
+      <pre>Answers: {{ answers | json }}</pre>
+      <pre>Answer:  {{ data.answer | json }}</pre>
+    </div>
+    <div ng-show="isDone()" class="text-center">
+      <p>Review your marketing plan and submit your entry</p><br />
+      <div ng-repeat="question in questions" ng-init="questionIndex = $index">
+        <p class="question {{ question.active }}">{{ question }}</p>
+        <div ng-repeat="answer in answers" ng-init="answerIndex = $index">
+          <p class="answer {{ answer.active }}">{{ answer }}</p>
+        </div>
+      </div>
+      <a href="#/contests"><button class="btn btn-primary btn-md">submit</button></a>
+    </div>
+  </div>
+</div>

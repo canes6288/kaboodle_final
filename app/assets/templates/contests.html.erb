@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <h1>Contests</h1>
+    <p class="lead">
+      Here's a list of all our contests!
+    </p>
+  </div>
+  <div ng-repeat="contest in contests">
+    <h3>{{ contest.title }}</h3>
+    <p>{{ contest.prize | currency }}</p>
+    <p>{{ contest.end_date }}</p>
+    <a href="#/contests/{{ contest.id }}"><p class="btn btn-md btn-primary" ng-click="selectContest(contest)">Details</p></a>
+  </div>
+</div>
