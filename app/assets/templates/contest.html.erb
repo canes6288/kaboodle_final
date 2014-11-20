@@ -1,0 +1,11 @@
+<div class="container">
+  <div>
+    <h1>{{ selectedContest.company }}</h1>
+    <h2>{{ selectedContest.title }}</h2>
+    <p>Total Prize Money: {{ selectedContest.prize | currency }}</p>
+    <p>Ends in (add countdown timer here)</p>
+    <a href="#/submission"><p class="btn btn-md btn-primary">submit idea</p></a>
+    <h3>Details:</h3>
+    <p>{{ selectedContest.description }}</p>
+  </div>
+</div>

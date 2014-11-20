@@ -6,10 +6,20 @@ angular
     ])
     .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
       $stateProvider
-          .state('home', {
-              url: '/',
-              templateUrl: 'home.html',
-              controller: 'HomeCtrl'
+          .state('contests', {
+            url: '/contests',
+            templateUrl: 'contests.html',
+            controller: 'ContestsCtrl'
+          })
+          .state('contest', {
+            url: '/contests/:contestId',
+            templateUrl: 'contest.html',
+            controller: 'ContestCtrl'
+          })
+          .state('submission', {
+            url: '/submission',
+            templateUrl: 'submission.html',
+            controller: 'SubmissionCtrl'
           })
           // an abstract state that just serves as a parent for the below child states
           .state('dashboard', {
@@ -38,5 +48,5 @@ angular
 
       // enable HTML5 Mode for SEO
       // $locationProvider.html5Mode(true);
-      
+
     });
