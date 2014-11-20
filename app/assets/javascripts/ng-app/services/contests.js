@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('myApp')
-.service('contestsService', function($http) {
+.service('contestsService', ["$http", function($http) {
 
   var that = this;
   var ContestsUrl = '/contests';
@@ -103,4 +103,4 @@ angular.module('myApp')
     }
   ];
 
-});
+}]);

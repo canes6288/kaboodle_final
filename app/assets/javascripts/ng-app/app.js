@@ -4,7 +4,7 @@ angular
         'ui.router',
         'templates'
     ])
-    .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+    .config(["$stateProvider", "$urlRouterProvider", "$locationProvider", function ($stateProvider, $urlRouterProvider, $locationProvider) {
       $stateProvider
           .state('contests', {
             url: '/contests',
@@ -49,4 +49,4 @@ angular
       // enable HTML5 Mode for SEO
       // $locationProvider.html5Mode(true);
 
-    });
+    }]);
