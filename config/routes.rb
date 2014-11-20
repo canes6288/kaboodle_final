@@ -1,10 +1,6 @@
 Rails.application.routes.draw do
 
-  # root 'static_pages#index'
-
   root 'application#index'
-  get '*path' => 'application#index'
-
   resources :answers
 
   resources :contests
@@ -12,6 +8,11 @@ Rails.application.routes.draw do
   resources :submissions
 
   resources :users
+
+
+
+  get '*path' => 'application#index'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
