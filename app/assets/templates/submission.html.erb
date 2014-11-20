@@ -4,9 +4,9 @@
       <p class="lead">Answer the questions below or upload a file.</p>
     </div>
     <h3 class="text-center">{{ currentQuestion.label }}</h3>
-    <div ng-switch="currentQuestion.input_type">
+    <div ng-hide="isDone()">
       <form name="questionForm" novalidate>
-        <div ng-switch-when="text">
+        <div>
           <textarea class="form-control" ng-model="data.answer"></textarea>
           <div class="question-button">
             <button class="btn btn-primary btn-md" ng-click="goToNextQuestion();" ng-disabled="questionForm.$invalid">next question</button>

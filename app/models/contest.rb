@@ -1,4 +1,4 @@
 class Contest < ActiveRecord::Base
-  # TODO: 2. Create associations for all models
-  # TODO: 3. Create new column called question_file in Contest model
+  has_many :submissions
+  has_many :questions
 end
