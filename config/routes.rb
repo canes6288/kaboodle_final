@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
-  root 'static_pages#index'
+  # root 'static_pages#index'
 
+  root 'application#index'
+  get '*path' => 'application#index'
 
   resources :answers
 
