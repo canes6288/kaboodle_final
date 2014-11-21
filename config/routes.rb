@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
 
-  resources :questions
-
   root 'application#index'
 
+  match '/signup',      to: 'users#new',              via: 'get'
+  match '/signin',      to: 'sessions#new',           via: 'get'
+  match '/signout',     to: 'sessions#destroy',       via: 'delete'
+  match '/home',   to: 'static_pages#home',      via: 'get'
   match '/save-answers.json', to: 'answers#save_from_submission', via: 'post'
+
+
+  resources :questions
 
   resources :answers
 
@@ -14,9 +19,9 @@ Rails.application.routes.draw do
 
   resources :users
 
+  resources :sessions,  only: [:create, :destroy]
 
-
-  get '*path' => 'application#index'
+  get '/app' => 'application#index'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

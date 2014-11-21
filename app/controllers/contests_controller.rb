@@ -1,6 +1,7 @@
 class ContestsController < ApplicationController
   before_action :set_contest, only: [:show, :edit, :update, :destroy]
-
+  before_action :signed_in_user
+  
   # GET /contests
   # GET /contests.json
   def index

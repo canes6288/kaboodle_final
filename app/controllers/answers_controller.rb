@@ -1,6 +1,7 @@
 class AnswersController < ApplicationController
   before_action :set_answer, only: [:show, :edit, :update, :destroy]
-
+  before_action :signed_in_user
+  
   # GET /answers
   # GET /answers.json
   def index
