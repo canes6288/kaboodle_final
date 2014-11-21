@@ -22,6 +22,15 @@ class AnswersController < ApplicationController
   def edit
   end
 
+  def save_from_submission
+    @sub = current_user.submissions.create(contest_id: params[:contest_id])
+
+    #why is this params[:answers] and not just answers?
+    params[:answers].each do |answer|
+      @sub.answers.create(question_id: answer["question_id"], content: answer["content"])
+    end
+  end
+
   # POST /answers
   # POST /answers.json
   def create
@@ -70,6 +79,6 @@ class AnswersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def answer_params
-      params.require(:answer).permit(:submission_id, :content)
+      params.permit(:submission_id, :content, :contest_id, :answers)
     end
 end

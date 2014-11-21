@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   match '/signin',      to: 'sessions#new',           via: 'get'
   match '/signout',     to: 'sessions#destroy',       via: 'delete'
   match '/home',   to: 'static_pages#home',      via: 'get'
+  match '/save-answers.json', to: 'answers#save_from_submission', via: 'post'
+
 
   resources :questions
 

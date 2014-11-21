@@ -21,4 +21,9 @@ angular.module('myApp')
     console.log('setSelectedContest');
     this.selectedContest = contest;
   };
+
+  this.postAnswers = function(params) {
+    return $http.post("/save-answers.json", params)
+  };
+
 }]);
