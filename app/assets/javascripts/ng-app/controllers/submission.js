@@ -27,18 +27,21 @@ angular.module('myApp')
 
   $scope.data = {};
 
+  // var answer =
+
+
   //pushing answer into answers array and resetting currentQuestion = question_file[next questions index number]
   $scope.goToNextQuestion = function () {
     // console.log('answer: ' + answer);
-    console.log('$scope.data.answer: ' + $scope.data.answer);
+    console.log($scope.content);
     if ($scope.currentQuestion.question_number < $scope.numQuestions()) {
-      $scope.answers.push($scope.data.answer);
-      $scope.data.answer = '';
+      $scope.answers.push({ question_id: $scope.currentQuestion.id,
+                            content: $scope.content});
+      $scope.content = '';
       // $scope.questions.push($scope.currentQuestion.label)
-      $scope.currentQuestion =
-      $scope.questions[$scope.currentQuestion.question_number];
+      $scope.currentQuestion = $scope.questions[$scope.currentQuestion.question_number];
       $scope.questionForm.$setPristine();
-   }
+    }
   };
 
   $scope.isDone = function() {
@@ -54,6 +57,10 @@ angular.module('myApp')
     return stepNumber < $scope.currentQuestion.question_number;
   };
 
+  $scope.submitAnswers = function() {
+    var params = { contest_id: $scope.selectedContest.id, answers: $scope.answers };
+    contestsService.postAnswers(params);
+  };
 
 
 }]);

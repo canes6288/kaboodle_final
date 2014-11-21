@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   resources :questions
 
   root 'application#index'
+
+  match '/save-answers.json', to: 'answers#save_from_submission', via: 'post'
+
   resources :answers
 
   resources :contests
