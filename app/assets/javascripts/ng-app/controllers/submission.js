@@ -9,6 +9,7 @@ angular.module('myApp')
   $scope.getQuestions = function() {
     contestsService.getQuestions().success(function(data) {
       $scope.questions = data;
+      $scope.currentQuestion = $scope.questions[0];
     }).error(function() {
       alert('something went wrong!');
     });
@@ -17,7 +18,7 @@ angular.module('myApp')
   $scope.getQuestions();
 
   $scope.numQuestions = function() {
-    return $scope.selectedContest.questions.length;
+    return $scope.questions.length;
   };
 
 
@@ -35,13 +36,18 @@ angular.module('myApp')
       $scope.data.answer = '';
       // $scope.questions.push($scope.currentQuestion.label)
       $scope.currentQuestion =
-      $scope.selectedContest.questions[$scope.currentQuestion.question_number];
+      $scope.questions[$scope.currentQuestion.question_number];
       $scope.questionForm.$setPristine();
    }
   };
 
   $scope.isDone = function() {
-    return $scope.currentQuestion.question_number === $scope.numQuestions();
+    if ($scope.currentQuestion) {
+      return $scope.currentQuestion.question_number === $scope.numQuestions();
+    }
+    else {
+      return false;
+    }
   };
 
   $scope.isStepDone = function(stepNumber) {
