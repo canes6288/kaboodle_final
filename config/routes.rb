@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
 
+  root 'application#index'
+
+  match '/signup',      to: 'users#new',              via: 'get'
+  match '/signin',      to: 'sessions#new',           via: 'get'
+  match '/signout',     to: 'sessions#destroy',       via: 'delete'
+
   resources :questions
 
-  root 'application#index'
   resources :answers
 
   resources :contests
@@ -11,9 +16,9 @@ Rails.application.routes.draw do
 
   resources :users
 
+  resources :sessions,  only: [:create, :destroy]
 
-
-  get '*path' => 'application#index'
+  get '/app' => 'application#index'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
