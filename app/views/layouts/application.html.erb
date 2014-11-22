@@ -8,6 +8,7 @@
 </head>
 <body ng-app="myApp">
   <%= render 'layouts/navigation' %>
+  <%= flash[:notice] %>
   <%= yield %>
 </body>
 </html>
