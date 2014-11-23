@@ -1,4 +1,4 @@
 json.array!(@contests) do |contest|
-  json.extract! contest, :id, :title, :description, :end_date, :prize, :company
+  json.extract! contest, :id, :title, :description, :end_date, :prize, :company, :image_url
   json.url contest_url(contest, format: :json)
 end

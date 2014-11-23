@@ -4,7 +4,7 @@
 Contest.destroy_all
 Question.destroy_all
 
-a = Contest.create(title: "Lego's Build Your Dream Event at Piedmont Park, Atlanta, GA", description: "McSweeney's leggings yr skateboard, keffiyeh letterpress mustache polaroid meggings.", end_date: "2015-06-02 17:19:41", prize: 1000, company: "Red Bull")
+a = Contest.create(title: "Lego's Build Your Dream Event at Piedmont Park, Atlanta, GA", description: "McSweeney's leggings yr skateboard, keffiyeh letterpress mustache polaroid meggings.", end_date: "2015-06-02 17:19:41", prize: 1000, company: "Red Bull", image_url: "http://i.imgur.com/pbl9l6y.jpg")
 b = Contest.create(title: "GoPro's Surfing Event in Huntington Beach, CA", description: "Flexitarian sartorial cornhole organic, sustainable YOLO Carles twee four loko PBR street art.", end_date: "2015-07-02 17:19:41", prize: 1000, company: "Blue Egg")
 c = Contest.create(title: "Spotify's Battle of the Bands Event at Lakewood Amphitheatre", description: "DIY Tonx meditation, brunch cardigan pop-up PBR&B four dollar toast.", end_date: "2015-08-02 17:19:41", prize: 1000, company: "Black Cat")
 d = Contest.create(title: "General Assembly's Grand Opening Event at Ponce City Market", description: "Banh mi migas paleo art party. Art party vinyl whatever, 90's semiotics sartorial American Apparel Blue Bottle heirloom.", end_date: "2015-09-02 17:19:41", prize: 1000, company: "Red Fox")
