@@ -1,8 +1,50 @@
 @import "bootstrap";
 @import "globals";
 @import "dashboard";
+@import "contests";
+@import "form";
+
+.container-fluid {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
 
 .row {
   margin-left: 0;
   margin-right: 0;
+}
+
+.navbar {
+  margin-bottom: 0px;
+}
+
+.container {
+  width: 1130px;
+}
+
+.container .jumbotron {
+  border-radius: 0px;
+  /*margin-bottom: 0px;*/
+}
+
+a {
+  text-decoration: none;
+}
+
+a h4 {
+  color: #ffffff;
+}
+
+.footer {
+  margin: 50px auto 20px;
+}
+
+/*---- home ----*/
+
+div.jumbotron.home {
+  margin: 0 auto;
+  width: 75%;
+  margin-top: 60px;
 }
