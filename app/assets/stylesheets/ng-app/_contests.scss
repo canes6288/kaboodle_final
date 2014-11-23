@@ -15,7 +15,7 @@ div.jumbotron.contests-list {
 .col-md-12.contest-header{
   padding-left: 0;
   padding-right: 0;
-  margin-bottom: 60px;
+  /*margin-bottom: 60px;*/
 }
 
 .contest-image {
@@ -35,7 +35,11 @@ div.jumbotron.contest-details {
 }
 
 .prize, .deadline {
-  background-color: #d4d4d4;
+  background-color: #333333;
+}
+
+.prize h4, .deadline h4 {
+  color: #ffffff;
 }
 
 button {
