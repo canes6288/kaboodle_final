@@ -4,11 +4,11 @@
 Contest.destroy_all
 Question.destroy_all
 
-a = Contest.create(title: "Red Bull's Piedmont Park Event", description: "McSweeney's leggings yr skateboard, keffiyeh letterpress mustache polaroid meggings.", end_date: "2015-06-02 17:19:41", prize: 1000, company: "Red Bull")
-b = Contest.create(title: "Blue Egg's Piedmont Park Event", description: "Flexitarian sartorial cornhole organic, sustainable YOLO Carles twee four loko PBR street art.", end_date: "2015-07-02 17:19:41", prize: 1000, company: "Blue Egg")
-c = Contest.create(title: "Black Cat's Piedmont Park Event", description: "DIY Tonx meditation, brunch cardigan pop-up PBR&B four dollar toast.", end_date: "2015-08-02 17:19:41", prize: 1000, company: "Black Cat")
-d = Contest.create(title: "Red Fox's Piedmont Park Event", description: "Banh mi migas paleo art party. Art party vinyl whatever, 90's semiotics sartorial American Apparel Blue Bottle heirloom.", end_date: "2015-09-02 17:19:41", prize: 1000, company: "Red Fox")
-e = Contest.create(title: "Green Frog's Piedmont Park Event", description: " Asymmetrical tilde next level, DIY yr cold-pressed Vice fingerstache Helvetica Carles selfies tattooed.", end_date: "2015-10-02 17:19:41", prize: 1000, company: "Green Frog")
+a = Contest.create(title: "Lego's Build Your Dream Event at Piedmont Park, Atlanta, GA", description: "McSweeney's leggings yr skateboard, keffiyeh letterpress mustache polaroid meggings.", end_date: "2015-06-02 17:19:41", prize: 1000, company: "Red Bull")
+b = Contest.create(title: "GoPro's Surfing Event in Huntington Beach, CA", description: "Flexitarian sartorial cornhole organic, sustainable YOLO Carles twee four loko PBR street art.", end_date: "2015-07-02 17:19:41", prize: 1000, company: "Blue Egg")
+c = Contest.create(title: "Spotify's Battle of the Bands Event at Lakewood Amphitheatre", description: "DIY Tonx meditation, brunch cardigan pop-up PBR&B four dollar toast.", end_date: "2015-08-02 17:19:41", prize: 1000, company: "Black Cat")
+d = Contest.create(title: "General Assembly's Grand Opening Event at Ponce City Market", description: "Banh mi migas paleo art party. Art party vinyl whatever, 90's semiotics sartorial American Apparel Blue Bottle heirloom.", end_date: "2015-09-02 17:19:41", prize: 1000, company: "Red Fox")
+e = Contest.create(title: "SweetWater Brewing's Water Balloon Fight in Centennial Park", description: " Asymmetrical tilde next level, DIY yr cold-pressed Vice fingerstache Helvetica Carles selfies tattooed.", end_date: "2015-10-02 17:19:41", prize: 1000, company: "Green Frog")
 
 Question.create(question_number: 1, contest_id: a.id, content:"Give a brief overview of your idea")
 Question.create(question_number: 2, contest_id: a.id, content:"What are you trying to achieve through the campaign and how will you know when it's achieved?")
