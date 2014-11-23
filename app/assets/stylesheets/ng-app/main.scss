@@ -4,6 +4,10 @@
 @import "contests";
 @import "form";
 
+body {
+  padding-top: 50px;
+}
+
 .container-fluid {
   margin-left: 0;
   margin-right: 0;
@@ -16,13 +20,13 @@
   margin-right: 0;
 }
 
-.navbar {
+/*.navbar {
   margin-bottom: 0px;
-}
+}*/
 
-.container {
+/*.container {
   width: 1130px;
-}
+}*/
 
 .container .jumbotron {
   border-radius: 0px;
