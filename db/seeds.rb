@@ -44,7 +44,7 @@ e = Contest.create(title: "SweetWater Brewing's Water Balloon Fight in Centennia
                    end_date: "2015-10-02 17:19:41",
                    prize: 1000,
                    company: "SweetWater Brewery",
-                   image_url: "http://i.imgur.com/B7F8RHW.jpg",
+                   image_url: "http://i.imgur.com/doW2OEW.jpg",
                    event_budget: "$2000",
                    event_date: "July 4th, 2015")
 
