@@ -4,11 +4,49 @@
 Contest.destroy_all
 Question.destroy_all
 
-a = Contest.create(title: "Lego's Build Your Dream Event at Piedmont Park, Atlanta, GA", description: "McSweeney's leggings yr skateboard, keffiyeh letterpress mustache polaroid meggings.", end_date: "2015-06-02 17:19:41", prize: 1000, company: "Red Bull", image_url: "http://i.imgur.com/jZRgY9B.jpg")
-b = Contest.create(title: "GoPro's Surfing Event in Huntington Beach, CA", description: "Flexitarian sartorial cornhole organic, sustainable YOLO Carles twee four loko PBR street art.", end_date: "2015-07-02 17:19:41", prize: 1000, company: "Blue Egg", image_url: "http://i.imgur.com/MEvGvor.jpg")
-c = Contest.create(title: "Spotify's Battle of the Bands Event at Lakewood Amphitheatre", description: "DIY Tonx meditation, brunch cardigan pop-up PBR&B four dollar toast.", end_date: "2015-08-02 17:19:41", prize: 1000, company: "Black Cat", image_url:"http://i.imgur.com/oMm3fwY.jpg")
-d = Contest.create(title: "General Assembly's Grand Opening Event at Ponce City Market", description: "Banh mi migas paleo art party. Art party vinyl whatever, 90's semiotics sartorial American Apparel Blue Bottle heirloom.", end_date: "2015-09-02 17:19:41", prize: 1000, company: "Red Fox", image_url: "http://i.imgur.com/OHEvvhw.jpg")
-e = Contest.create(title: "SweetWater Brewing's Water Balloon Fight in Centennial Park", description: " Asymmetrical tilde next level, DIY yr cold-pressed Vice fingerstache Helvetica Carles selfies tattooed.", end_date: "2015-10-02 17:19:41", prize: 1000, company: "Green Frog", image_url: "http://i.imgur.com/B7F8RHW.jpg")
+a = Contest.create(title: "Lego's Build Your Dream Event at Stone Mountain Park, Atlanta, GA",
+                   description: "Lego is a company focused on expression.  Build spaceship, build a dollhouse, build your dream.  We want our event to encourage kids to build their dream lego buid.  We want to hold an event at Stone Mountain Village that let's kids have free reign on a huge 20,000 piece lego set.  A celebration of creativity and building cool stuff.  Help us make this happen.",
+                   end_date: "2015-06-02 17:19:41", prize: 1000,
+                   company: "Lego",
+                   image_url: "http://i.imgur.com/jZRgY9B.jpg",
+                   event_budget: "$7000 (lego pieces included!)",
+                   event_date: "July 18th, 2015")
+
+b = Contest.create(title: "GoPro's Surfing Competition in Huntington Beach, CA",
+                   description: "Huntington Beach is the home of the best surfers in Cali.  Now it's time to pit the best against the best.  We want to hold the biggest GoPro Surfing Competition equipped with not only the top surfers, but also a way for spectators to do some cool stuff on the side.  Involving them in the surfing competition's voting, having a sandcastle contest of their own, etc.  We want everybody at this event to have a reason to use a GoPro as we will be handing them out randomly to people at the event to film footage of their own.  Tell us how we can make a Surfing Competion more than a Surfing Competition.",
+                   end_date: "2015-07-02 17:19:41",
+                   prize: 7500,
+                   company: "GoPro",
+                   image_url: "http://i.imgur.com/MEvGvor.jpg",
+                   event_budget: "$35000",
+                   event_date: "July 4th, 2015")
+
+c = Contest.create(title: "Spotify's Battle of the Bands Event at Lakewood Amphitheatre",
+                   description: "An evening of the best bands Atlanta has to offer.  We want locals to hear what music their city is making.  All types of bands and music should be included. We also want this battle of the bands to have a twist.  We're open to awesome competition categories, getting the crowd involved, and even sweepstakes.  Honestly, we're open to anything that will NOT make this just another typical Battle of the Bands.",
+                   end_date: "2015-08-02 17:19:41",
+                   prize: 4000,
+                   company: "Spotify",
+                   image_url:"http://i.imgur.com/oMm3fwY.jpg",
+                   event_budget: "$20000",
+                   event_date: "July 4th, 2015")
+
+d = Contest.create(title: "General Assembly's FoodTruck-O-Rama at Ponce City Market",
+                   description: "Here at General Assembly, we value education, furtherign our students dreams, and food trucks.  We want to say a big thank you to the Atlanta community for having us.  As we enter our new space in Ponce City Market, we want to have a housewarming party of our own!  We're going to have the best food trucks in the PCM parking lot for everyone to gorge themselves on amazing food.  Now, we just need to figure out how to get the word out.  That's where you come in. Help us market our event!",
+                   end_date: "2015-09-02 17:19:41",
+                   prize: 1000,
+                   company: "General Assembly",
+                   image_url: "http://i.imgur.com/OHEvvhw.jpg",
+                   event_budget: "$5000",
+                   event_date: "July 4th, 2015")
+
+e = Contest.create(title: "SweetWater Brewing's Water Balloon Fight in Centennial Park",
+                   description: "There's nothing better than hitting a few our friends with water balloons.  We know that.  You know that.  So, how do we make this happen?\n\nHelp us throw the biggest Water Balloon Fight imaginable in Centennial Park.  And it doesn't need to be just water balloons!  Water guns, noodles, or whatever your heart desires are fair game.  Help us plan this water balloon fight to be fun for all ages (including adults).",
+                   end_date: "2015-10-02 17:19:41",
+                   prize: 1000,
+                   company: "SweetWater Brewery",
+                   image_url: "http://i.imgur.com/B7F8RHW.jpg",
+                   event_budget: "$2000",
+                   event_date: "July 4th, 2015")
 
 Question.create(question_number: 1, contest_id: a.id, content:"Give a brief overview of your idea")
 Question.create(question_number: 2, contest_id: a.id, content:"What are you trying to achieve through the campaign and how will you know when it's achieved?")
