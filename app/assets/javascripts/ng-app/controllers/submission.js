@@ -29,11 +29,11 @@ angular.module('myApp')
 
   // var answer =
 
+  $scope.myInputFocus= true;
 
   //pushing answer into answers array and resetting currentQuestion = question_file[next questions index number]
   $scope.goToNextQuestion = function () {
     // console.log('answer: ' + answer);
-    console.log($scope.content);
     if ($scope.currentQuestion.question_number < $scope.numQuestions()) {
       $scope.answers.push({ question_id: $scope.currentQuestion.id,
                             content: $scope.content});
@@ -41,6 +41,7 @@ angular.module('myApp')
       // $scope.questions.push($scope.currentQuestion.label)
       $scope.currentQuestion = $scope.questions[$scope.currentQuestion.question_number];
       $scope.questionForm.$setPristine();
+      $scope.myInputFocus= true;
     }
   };
 
@@ -62,5 +63,25 @@ angular.module('myApp')
     contestsService.postAnswers(params);
   };
 
+}])
 
-}]);
+.directive('focusMe', function ($timeout, $parse) {
+  return {
+    link: function (scope, element, attrs) {
+      var model = $parse(attrs.focusMe);
+      scope.$watch(model, function (value) {
+        if (value === true) {
+          $timeout(function () {
+            scope.$apply(model.assign(scope, false));
+            element[0].focus();
+          }, 30);
+        }
+      });
+    }
+  };
+});
+
+
+
+
+
