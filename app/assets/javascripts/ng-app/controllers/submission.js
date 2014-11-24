@@ -34,7 +34,6 @@ angular.module('myApp')
   //pushing answer into answers array and resetting currentQuestion = question_file[next questions index number]
   $scope.goToNextQuestion = function () {
     // console.log('answer: ' + answer);
-    console.log($scope.content);
     if ($scope.currentQuestion.question_number < $scope.numQuestions()) {
       $scope.answers.push({ question_id: $scope.currentQuestion.id,
                             content: $scope.content});

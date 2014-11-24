@@ -39,21 +39,12 @@ h1, h2, h3, h4 {
   height: 65px;
 }
 
-.navbar-brand > img {
-  width: 190px;
+.navbar-toggle {
+  margin-top: 15px;
 }
-
-/*.navbar {
-  margin-bottom: 0px;
-}*/
-
-/*.container {
-  width: 1130px;
-}*/
 
 .container .jumbotron {
   border-radius: 0px;
-  /*margin-bottom: 0px;*/
 }
 
 a {
@@ -68,8 +59,6 @@ a h4 {
 .footer {
   margin: 50px auto 20px;
 }
-
-/*---- home ----*/
 
 div.jumbotron.home {
   margin: 0 auto;
