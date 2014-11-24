@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   match '/save-answers.json', to: 'answers#save_from_submission', via: 'post'
   match '/submissions',       to: 'submissions#index',            via: 'get'
   match '/users',             to: 'users#index',                  via: 'get'
+  match '/get-current-user',  to: 'users#get_current_user',       via: 'get'
 
 
 

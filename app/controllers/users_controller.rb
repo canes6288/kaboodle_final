@@ -18,6 +18,10 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def get_current_user
+    @current_user = current_user
+  end
+
   def edit
     @user = User.find(params[:id])
   end
@@ -82,7 +86,7 @@ class UsersController < ApplicationController
     def signed_in_user
       unless signed_in?
         store_location
-        redirect_to signin_path, notice: "Please sign in." 
+        redirect_to signin_path, notice: "Please sign in."
       end
     end
 

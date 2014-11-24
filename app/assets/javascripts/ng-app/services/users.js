@@ -3,19 +3,9 @@
 angular.module('myApp')
 .service('usersService', ["$http", function($http) {
 
-  var UsersUrl = '/users';
 
-
-  this.getAllUsers = function() {
-    return $http.get('/users.json', {
-      params : { admin : this.admin }
-    });
+  this.getCurrentUser = function() {
+    return $http.get('/get-current-user.json');
   };
-
-  this.setSelectedContest = function(contest) {
-    this.selectedContest = contest;
-  };
-
-
 
 }]);
