@@ -11,7 +11,7 @@
         <div class="textarea">
           <textarea class="form-control" ng-model="content" focus-me="myInputFocus"></textarea>
           <div class="question-button">
-            <button class="question-submit btn btn-primary btn-md submit" ng-click="goToNextQuestion();" ng-disabled="questionForm.$invalid">next question</button>
+            <button class="kb-button question-submit btn btn-primary btn-md submit" ng-click="goToNextQuestion();" ng-disabled="questionForm.$invalid">next question</button>
           </div>
         </div>
       </form>
@@ -25,7 +25,7 @@
           <p class="answer {{ answers[$index].active }}">{{ answers[$index] }}</p>
         </div>
       </div>
-      <a href="#/contests"><button ng-click="submitAnswers()" class="question-submit btn btn-primary btn-md submit">Submit</button></a>
+      <a href="#/contests"><button ng-click="submitAnswers()" class="kb-button question-submit btn btn-primary btn-md submit">Submit</button></a>
     </div>
   </div>
 </div>
