@@ -27,6 +27,7 @@ angular
           templateUrl: 'submission.html',
           controller: 'SubmissionCtrl'
         })
+
         // an abstract state that just serves as a parent for the below child states
         .state('dashboard', {
           abstract: true,

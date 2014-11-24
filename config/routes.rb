@@ -2,11 +2,14 @@ Rails.application.routes.draw do
 
   root 'application#index'
 
-  match '/signup',      to: 'users#new',              via: 'get'
-  match '/signin',      to: 'sessions#new',           via: 'get'
-  match '/signout',     to: 'sessions#destroy',       via: 'delete'
-  match '/home',   to: 'static_pages#home',      via: 'get'
+  match '/signup',            to: 'users#new',                    via: 'get'
+  match '/signin',            to: 'sessions#new',                 via: 'get'
+  match '/signout',           to: 'sessions#destroy',             via: 'delete'
+  match '/home',              to: 'static_pages#home',            via: 'get'
   match '/save-answers.json', to: 'answers#save_from_submission', via: 'post'
+  match '/submissions',       to: 'submissions#index',            via: 'get'
+  match '/users',             to: 'users#index',                  via: 'get'
+
 
 
   resources :questions
