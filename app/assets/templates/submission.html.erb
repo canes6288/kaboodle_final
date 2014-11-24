@@ -21,8 +21,8 @@
       <h3>Review your marketing plan below and submit your entry</h3><br />
       <div class="well">
         <div ng-repeat="question in questions">
-          <h3 class="question {{ question.active }}">{{ question.content }}</h3>
-          <p class="answer {{ answers[$index].active }}">{{ answers[$index] }}</p>
+          <h2 class="question {{ question.active }}">{{ question.content }}</h2>
+          <p class="answer {{ answers[$index].active }}">{{ answers[$index].content }}</p>
         </div>
       </div>
       <a href="#/contests"><button ng-click="submitAnswers()" class="kb-button question-submit btn btn-primary btn-md submit">Submit</button></a>
