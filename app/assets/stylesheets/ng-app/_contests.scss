@@ -11,12 +11,23 @@ div.jumbotron.contests-list {
   margin-bottom: -30px;
 }
 
+.contests-title {
+  background-color: #F89839;
+  height: 100px;
+  color: #ffffff;
+  margin-top: 0px;
+  padding-top: 37px;
+  font-family: 'Pacifico';
+  font-size: 3.5em;
+  height: 130px;
+  font-weight: 300;
+}
+
 /*---- contest page ----*/
 
 .col-md-12.contest-header {
   padding-left: 0;
   padding-right: 0;
-  /*margin-bottom: 60px;*/
 }
 
 .contest-image {
@@ -28,7 +39,7 @@ div.jumbotron.contest-details {
 }
 
 .title, .prize, .deadline, .submit {
-  padding: 10px;
+  padding: 8px;
 }
 
 .title {
@@ -43,14 +54,6 @@ div.jumbotron.contest-details {
   color: #ffffff;
 }
 
-button {
-  width: 100%;
-  border: none;
-  margin: 0;
-  padding: 0;
-  background-color: #F89839;
-}
-
 button h4 {
   color: #ffffff;
 }
@@ -58,4 +61,3 @@ button h4 {
 .submit {
   background-color: #F89839;
 }
-

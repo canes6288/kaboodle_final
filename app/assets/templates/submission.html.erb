@@ -1,29 +1,31 @@
 <div class="container">
-  <div class="jumbotron text-center">
-    <div ng-hide="isDone()">
-      <p class="lead">Answer the questions below or upload a file.</p>
+  <div class="jumbotron questions text-center">
+    <div class="row">
+      <div ng-hide="isDone()">
+        <h4>Answer the questions below.</h4>
+      </div>
     </div>
-    <h3 class="text-center">{{ currentQuestion.content }}</h3>
     <div ng-hide="isDone()">
+      <h2 class="text-center">{{ currentQuestion.content }}</h2>
       <form name="questionForm" novalidate>
-        <div>
-          <textarea class="form-control" ng-model="content"></textarea>
+        <div class="textarea">
+          <textarea class="form-control" ng-model="content" focus-me="myInputFocus"></textarea>
           <div class="question-button">
-            <button class="btn btn-primary btn-md" ng-click="goToNextQuestion();" ng-disabled="questionForm.$invalid">next question</button>
+            <button class="question-submit btn btn-primary btn-md submit" ng-click="goToNextQuestion();" ng-disabled="questionForm.$invalid">next question</button>
           </div>
         </div>
       </form>
-      <pre>Questions: {{ questions | json }}</pre>
-      <pre>Answers: {{ answers | json }}</pre>
-      <pre>Answer:  {{ data.answer | json }}</pre>
     </div>
     <div ng-show="isDone()" class="text-center">
-      <p>Review your marketing plan and submit your entry</p><br />
-      <div ng-repeat="question in questions">
-        <p class="question {{ question.active }}">{{ question.content }}</p>
-        <p class="answer {{ answers[$index].active }}">{{ answers[$index] }}</p>
+      <h2>You're almost done!</h2>
+      <h3>Review your marketing plan below and submit your entry</h3><br />
+      <div class="well">
+        <div ng-repeat="question in questions">
+          <h3 class="question {{ question.active }}">{{ question.content }}</h3>
+          <p class="answer {{ answers[$index].active }}">{{ answers[$index] }}</p>
+        </div>
       </div>
-      <a href="#/contests"><button ng-click="submitAnswers()" class="btn btn-primary btn-md">submit</button></a>
+      <a href="#/contests"><button ng-click="submitAnswers()" class="question-submit btn btn-primary btn-md submit">Submit</button></a>
     </div>
   </div>
 </div>

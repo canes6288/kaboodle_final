@@ -1,0 +1,37 @@
+div.jumbotron.questions {
+  background-color: transparent;  
+}
+
+textarea.form-control {
+  border-radius: 0px;
+  height: 200px;
+}
+
+button.question-submit {
+  margin-top: 15px;
+}
+
+.textarea {
+  margin: 50px auto;
+}
+
+.well {
+  border-radius: 0px;
+  border: none;
+  margin-bottom: 0px;
+}
+
+.well h3 {
+  margin-top: 35px;
+  margin-bottom: 25px;   
+  color: #F89839;
+}
+
+.question-submit {
+  width: 50%;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: #F89839;
+  border: none;
+  border-radius: 0px;
+}
