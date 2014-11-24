@@ -55,7 +55,6 @@ Question.create(question_number: 4, contest_id: a.id, content:"Which campaign or
 Question.create(question_number: 5, contest_id: a.id, content:"Which media channels will you use to reach and influence the target audience? What will be the sequence and integration of media activities?")
 Question.create(question_number: 6, contest_id: a.id, content:"Managing the assets to form the campaign.")
 Question.create(question_number: 7, contest_id: a.id, content:"What needs to be tested before the campaign is live and adjusted during the campaign?")
-Question.create(question_number: 8, contest_id: a.id, content:"You're almost done...")
 
 Question.create(question_number: 1, contest_id: b.id, content:"Give a brief overview of your idea")
 Question.create(question_number: 2, contest_id: b.id, content:"What are you trying to achieve through the campaign and how will you know when it's achieved?")
@@ -64,7 +63,6 @@ Question.create(question_number: 4, contest_id: b.id, content:"Which campaign or
 Question.create(question_number: 5, contest_id: b.id, content:"Which media channels will you use to reach and influence the target audience? What will be the sequence and integration of media activities?")
 Question.create(question_number: 6, contest_id: b.id, content:"Managing the assets to form the campaign.")
 Question.create(question_number: 7, contest_id: b.id, content:"What needs to be tested before the campaign is live and adjusted during the campaign?")
-Question.create(question_number: 8, contest_id: b.id, content:"You're almost done...")
 
 Question.create(question_number: 1, contest_id: c.id, content:"Give a brief overview of your idea")
 Question.create(question_number: 2, contest_id: c.id, content:"What are you trying to achieve through the campaign and how will you know when it's achieved?")
@@ -73,7 +71,6 @@ Question.create(question_number: 4, contest_id: c.id, content:"Which campaign or
 Question.create(question_number: 5, contest_id: c.id, content:"Which media channels will you use to reach and influence the target audience? What will be the sequence and integration of media activities?")
 Question.create(question_number: 6, contest_id: c.id, content:"Managing the assets to form the campaign.")
 Question.create(question_number: 7, contest_id: c.id, content:"What needs to be tested before the campaign is live and adjusted during the campaign?")
-Question.create(question_number: 8, contest_id: c.id, content:"You're almost done...")
 
 Question.create(question_number: 1, contest_id: d.id, content:"Give a brief overview of your idea")
 Question.create(question_number: 2, contest_id: d.id, content:"What are you trying to achieve through the campaign and how will you know when it's achieved?")
@@ -82,7 +79,6 @@ Question.create(question_number: 4, contest_id: d.id, content:"Which campaign or
 Question.create(question_number: 5, contest_id: d.id, content:"Which media channels will you use to reach and influence the target audience? What will be the sequence and integration of media activities?")
 Question.create(question_number: 6, contest_id: d.id, content:"Managing the assets to form the campaign.")
 Question.create(question_number: 7, contest_id: d.id, content:"What needs to be tested before the campaign is live and adjusted during the campaign?")
-Question.create(question_number: 8, contest_id: d.id, content:"You're almost done...")
 
 Question.create(question_number: 1, contest_id: e.id, content:"Give a brief overview of your idea")
 Question.create(question_number: 2, contest_id: e.id, content:"What are you trying to achieve through the campaign and how will you know when it's achieved?")
@@ -91,4 +87,3 @@ Question.create(question_number: 4, contest_id: e.id, content:"Which campaign or
 Question.create(question_number: 5, contest_id: e.id, content:"Which media channels will you use to reach and influence the target audience? What will be the sequence and integration of media activities?")
 Question.create(question_number: 6, contest_id: e.id, content:"Managing the assets to form the campaign.")
 Question.create(question_number: 7, contest_id: e.id, content:"What needs to be tested before the campaign is live and adjusted during the campaign?")
-Question.create(question_number: 8, contest_id: e.id, content:"You're almost done...")
