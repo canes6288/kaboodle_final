@@ -65,7 +65,7 @@ angular.module('myApp')
 
 }])
 
-.directive('focusMe', function ($timeout, $parse) {
+.directive('focusMe', ['$timeout', '$parse', function ($timeout, $parse) {
   return {
     link: function (scope, element, attrs) {
       var model = $parse(attrs.focusMe);
@@ -79,7 +79,7 @@ angular.module('myApp')
       });
     }
   };
-});
+}]);
 
 
 
