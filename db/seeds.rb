@@ -5,7 +5,7 @@ Contest.destroy_all
 Question.destroy_all
 
 a = Contest.create(title: "Lego's Build Your Dream Event at Stone Mountain Park, Atlanta, GA",
-                   description: "Lego is a company focused on expression.  Build spaceship, build a dollhouse, build your dream.  We want our event to encourage kids to build their dream lego buid.  We want to hold an event at Stone Mountain Village that let's kids have free reign on a huge 20,000 piece lego set.  A celebration of creativity and building cool stuff.  Help us make this happen.",
+                   description: "Lego is a company focused on expression.  Build a spaceship, build a dollhouse, build your dream.  We want our event to encourage kids to build their dream lego build.  We want to hold an event at Stone Mountain Village that let's kids have free reign on a huge 20,000 piece lego set.  A celebration of creativity and building cool stuff.  Help us make this happen.",
                    end_date: "2015-06-02 17:19:41", prize: 1000,
                    company: "Lego",
                    image_url: "http://i.imgur.com/jZRgY9B.jpg",
@@ -40,7 +40,7 @@ d = Contest.create(title: "General Assembly's FoodTruck-O-Rama at Ponce City Mar
                    event_date: "July 4th, 2015")
 
 e = Contest.create(title: "SweetWater Brewing's Water Balloon Fight in Centennial Park",
-                   description: "There's nothing better than hitting a few our friends with water balloons.  We know that.  You know that.  So, how do we make this happen?\n\nHelp us throw the biggest Water Balloon Fight imaginable in Centennial Park.  And it doesn't need to be just water balloons!  Water guns, noodles, or whatever your heart desires are fair game.  Help us plan this water balloon fight to be fun for all ages (including adults).",
+                   description: "There's nothing better than hitting a few of our friends with water balloons.  We know that.  You know that.  So, how do we make this happen?\n\nHelp us throw the biggest Water Balloon Fight imaginable in Centennial Park.  And it doesn't need to be just water balloons!  Water guns, noodles, or whatever your heart desires are fair game.  Help us plan this water balloon fight to be fun for ages 21+.",
                    end_date: "2015-10-02 17:19:41",
                    prize: 1000,
                    company: "SweetWater Brewery",
@@ -49,41 +49,39 @@ e = Contest.create(title: "SweetWater Brewing's Water Balloon Fight in Centennia
                    event_date: "July 4th, 2015")
 
 Question.create(question_number: 1, contest_id: a.id, content:"Give a brief overview of your idea")
-Question.create(question_number: 2, contest_id: a.id, content:"What are you trying to achieve through the campaign and how will you know when it's achieved?")
-Question.create(question_number: 3, contest_id: a.id, content:"How are you trying to position the company, products and services?")
-Question.create(question_number: 4, contest_id: a.id, content:"Which campaign or product offers will engage and convert the audience?")
-Question.create(question_number: 5, contest_id: a.id, content:"Which media channels will you use to reach and influence the target audience? What will be the sequence and integration of media activities?")
-Question.create(question_number: 6, contest_id: a.id, content:"Managing the assets to form the campaign.")
-Question.create(question_number: 7, contest_id: a.id, content:"What needs to be tested before the campaign is live and adjusted during the campaign?")
+Question.create(question_number: 2, contest_id: a.id, content:"How should we organize the 20,000 pieces?  Should it just be a free for all?")
+Question.create(question_number: 3, contest_id: a.id, content:"We're trying to reach out to parents of Lego kids.  How should we market this event on social media/online?")
+Question.create(question_number: 4, contest_id: a.id, content:"What other marketing efforts can we hold within the city (offline)?")
+Question.create(question_number: 5, contest_id: a.id, content:"What message about the Lego brand are you trying to send with your event idea?")
+Question.create(question_number: 6, contest_id: a.id, content:"Do you have an idea of where we should hold the event in Stone Mountain Park?")
+Question.create(question_number: 7, contest_id: a.id, content:"Any other logistics that may need to be addressed with your idea?")
 
 Question.create(question_number: 1, contest_id: b.id, content:"Give a brief overview of your idea")
-Question.create(question_number: 2, contest_id: b.id, content:"What are you trying to achieve through the campaign and how will you know when it's achieved?")
-Question.create(question_number: 3, contest_id: b.id, content:"How are you trying to position the company, products and services?")
-Question.create(question_number: 4, contest_id: b.id, content:"Which campaign or product offers will engage and convert the audience?")
-Question.create(question_number: 5, contest_id: b.id, content:"Which media channels will you use to reach and influence the target audience? What will be the sequence and integration of media activities?")
-Question.create(question_number: 6, contest_id: b.id, content:"Managing the assets to form the campaign.")
-Question.create(question_number: 7, contest_id: b.id, content:"What needs to be tested before the campaign is live and adjusted during the campaign?")
+Question.create(question_number: 2, contest_id: b.id, content:"We want the event to be more than a Surfing Competition.  How are you going to get spectators involved?")
+Question.create(question_number: 3, contest_id: b.id, content:"How are you trying to position GoPro with your idea for the spectators?")
+Question.create(question_number: 4, contest_id: b.id, content:"We're trying to reach out to extreme sport enthusiasts.  How should we market this event on social media/online?")
+Question.create(question_number: 5, contest_id: b.id, content:"What other marketing efforts can we hold within the city (offline)?")
+Question.create(question_number: 6, contest_id: b.id, content:"Any other logistics that may need to be addressed with your idea?")
 
 Question.create(question_number: 1, contest_id: c.id, content:"Give a brief overview of your idea")
-Question.create(question_number: 2, contest_id: c.id, content:"What are you trying to achieve through the campaign and how will you know when it's achieved?")
-Question.create(question_number: 3, contest_id: c.id, content:"How are you trying to position the company, products and services?")
-Question.create(question_number: 4, contest_id: c.id, content:"Which campaign or product offers will engage and convert the audience?")
-Question.create(question_number: 5, contest_id: c.id, content:"Which media channels will you use to reach and influence the target audience? What will be the sequence and integration of media activities?")
-Question.create(question_number: 6, contest_id: c.id, content:"Managing the assets to form the campaign.")
-Question.create(question_number: 7, contest_id: c.id, content:"What needs to be tested before the campaign is live and adjusted during the campaign?")
+Question.create(question_number: 2, contest_id: c.id, content:"What's the twist you're applying to your Battle of the Bands idea?")
+Question.create(question_number: 3, contest_id: c.id, content:"What criteria should the bands be judged on?  We're looking for more than just how they sound.")
+Question.create(question_number: 4, contest_id: c.id, content:"We want to advertise in other venues leading up to the event.  Any ideas on where we can do this?")
+Question.create(question_number: 5, contest_id: c.id, content:"What activities should we hold in the outer part of the Amplitheatre?  All we have so far is cornhole.")
+Question.create(question_number: 6, contest_id: c.id, content:"What message are you trying to send about the Spotify brand with your idea for Battle of the Bands")
+Question.create(question_number: 7, contest_id: c.id, content:"Any other logistics that may need to be addressed with your idea?")
 
 Question.create(question_number: 1, contest_id: d.id, content:"Give a brief overview of your idea")
-Question.create(question_number: 2, contest_id: d.id, content:"What are you trying to achieve through the campaign and how will you know when it's achieved?")
-Question.create(question_number: 3, contest_id: d.id, content:"How are you trying to position the company, products and services?")
-Question.create(question_number: 4, contest_id: d.id, content:"Which campaign or product offers will engage and convert the audience?")
-Question.create(question_number: 5, contest_id: d.id, content:"Which media channels will you use to reach and influence the target audience? What will be the sequence and integration of media activities?")
-Question.create(question_number: 6, contest_id: d.id, content:"Managing the assets to form the campaign.")
-Question.create(question_number: 7, contest_id: d.id, content:"What needs to be tested before the campaign is live and adjusted during the campaign?")
+Question.create(question_number: 2, contest_id: d.id, content:"We want to find new prospective students.  Where do we market this event to get ages 21-35 to this event?")
+Question.create(question_number: 3, contest_id: d.id, content:"What food trucks and how many should we have at this event?")
+Question.create(question_number: 4, contest_id: d.id, content:"Any idea on who would like to co-sponsor the event with us? We we're thinking about other companies in Ponce City Market.")
+Question.create(question_number: 5, contest_id: d.id, content:"What's our social media campaign?")
+Question.create(question_number: 6, contest_id: d.id, content:"Any other logistics that may need to be addressed with your idea?")
 
 Question.create(question_number: 1, contest_id: e.id, content:"Give a brief overview of your idea")
-Question.create(question_number: 2, contest_id: e.id, content:"What are you trying to achieve through the campaign and how will you know when it's achieved?")
-Question.create(question_number: 3, contest_id: e.id, content:"How are you trying to position the company, products and services?")
-Question.create(question_number: 4, contest_id: e.id, content:"Which campaign or product offers will engage and convert the audience?")
-Question.create(question_number: 5, contest_id: e.id, content:"Which media channels will you use to reach and influence the target audience? What will be the sequence and integration of media activities?")
-Question.create(question_number: 6, contest_id: e.id, content:"Managing the assets to form the campaign.")
-Question.create(question_number: 7, contest_id: e.id, content:"What needs to be tested before the campaign is live and adjusted during the campaign?")
+Question.create(question_number: 2, contest_id: e.id, content:"We don't want anyone to get hurt.  How do we prevent injuries (or at least keep them minimal)?")
+Question.create(question_number: 3, contest_id: e.id, content:"How are you trying to position the SweetWater Brewing Company with this event?  How will people view SweetWater after the event is over?")
+Question.create(question_number: 4, contest_id: e.id, content:"Where should we market this event?  We're aiming for people above the age of 21.")
+Question.create(question_number: 5, contest_id: e.id, content:"What other items should we have for people to use in the fight (other than water balloons)?  Should it be more than just a battle (capture the flag, etc)?")
+Question.create(question_number: 6, contest_id: e.id, content:"Any specific place we should hold the event in Centennial Park?")
+Question.create(question_number: 7, contest_id: e.id, content:"Any other logistics that may need to be addressed with your idea?")
